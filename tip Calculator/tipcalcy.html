@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="calcy.css">
+    
+    <title></title>
+</head>
+<body>
+<MAIN>
+    <h1>Tip calculator</h1>
+<div>
+<label>Bill amount</label>
+<input type="text" name=""id="bill_amount">
+<br>
+<label>tip percentage</label>
+<input type="text" name=""id="tip_perc">
+<br>
+<label>tip amount</label>
+<input type="text" name=""id="tip_amount"  disabled>
+<br>
+<label>total billed</label>
+<input type="text" name=""id="total_billed" disabled>
+<br>
+<button onclick="tipcalcy()">calculate</button>
+</div>
+ </MAIN>
+ <script>
+     const tipcalcy=() =>{
+         let amount=document.getElementById('bill_amount').value;
+         
+         let perc=document.getElementById('tip_perc').value;
+         
+         let tip=amount*(perc/100);
+         alert(tip);
+         let total=tip + Number(amount);
+         alert(total);
+         document.getElementById('tip_amount').value=tip;
+         document.getElementById('total_billed').value=total;
+
+
+     }
+ </script>
+    
+</body>
+</html>
